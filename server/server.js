@@ -6,9 +6,9 @@ app.use(cors());
 app.use(express.json());
 
 const users = [
-  { username: 'Alice', birthdate: '1998-04-02', age: 27, email: 'alice@example.com', password: 'alice123' },
-  { username: 'Bob', birthdate: '1996-09-15', age: 29, email: 'bob@example.com', password: 'bob123' },
-  { username: 'Charlie', birthdate: '2000-03-21', age: 25, email: 'charlie@example.com', password: 'charlie123' }
+  { username: 'Bob', birthdate: '2001-01-01', age: 24, email: 'bob@gmail.com', password: 'bob123' },
+  { username: 'Reem', birthdate: '2004-05-03', age: 21, email: 'Reem@gmail.com', password: 'Reem456!' },
+  { username: 'Admin', birthdate: '1990-12-12', age: 34, email: 'admin@hotmail.com', password: 'ADMIN' }
 ];
 
 app.post('/api/auth', (req, res) => {

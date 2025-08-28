@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-home',
   template: `
     <div class="p-4 bg-light rounded-3">
-      <h1 class="display-6">Welcome to the Week 5 lab</h1>
+      <h1 class="display-6">Welcome!!!</h1>
       <p class="lead">This is the Week 5 Angular + LocalStorage lab.</p>
     </div>
   `,
