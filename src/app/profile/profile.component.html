@@ -1,0 +1,47 @@
+<div *ngIf="user; else notLoggedIn" class="row">
+  <div class="col-md-4">
+    <div class="card mb-3">
+      <img src="assets/W4image.webp" class="card-img-top" alt="Profile"/>
+      <div class="card-body">
+        <h5 class="card-title mb-0">{{ user.username }}</h5>
+        <small class="text-muted">{{ user.email }}</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="h5">Profile</h2>
+        <form (ngSubmit)="save()">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Username</label>
+              <input [(ngModel)]="user!.username" name="username" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input [(ngModel)]="user!.email" name="email" type="email" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Birthdate</label>
+              <input [(ngModel)]="user!.birthdate" name="birthdate" type="date" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Age</label>
+              <input [(ngModel)]="user!.age" name="age" type="number" class="form-control" />
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <button class="btn btn-success" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #notLoggedIn>
+  <div class="alert alert-warning">You are not logged in. Please log in first.</div>
+</ng-template>
